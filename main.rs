@@ -73,7 +73,7 @@ mod map {
         pub fn new(s: TileVec) -> Map {
             let mut tiles= vec![];
             
-            for _ in range(0, s.y*s.y) {
+            for _ in range(0, s.x*s.y) {
             	tiles.push(Tile{ tpe: Non });
             }
             
