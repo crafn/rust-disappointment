@@ -86,14 +86,14 @@ mod map {
         pub fn print(&self) -> () {
             // rust-delight: range-based for loops are good.
             for y in range(0, self.size.y) {
-            	for x in range (0, self.size.x) {
-            		print!("{}",
-            			tile_type_to_char(
-            				self.get_tile(TileVec{x: x, y: y}).tpe
-            			)
-            		);
-            	}
-            	print!("\n");
+                for x in range (0, self.size.x) {
+                    print!("{}",
+                        tile_type_to_char(
+                            self.get_tile(TileVec{x: x, y: y}).tpe
+                        )
+                    );
+                }
+                print!("\n");
             }
         }
     } // impl Map
