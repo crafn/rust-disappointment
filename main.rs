@@ -5,9 +5,9 @@
 // rust-disappointment: "using namespace std" on by default
 
 mod math {
-	pub struct Vec2<T> {
-		pub x: T,
-		pub y: T,
+    pub struct Vec2<T> {
+        pub x: T,
+        pub y: T,
 	}
 	
 	// rust-disappointment: tedious syntax for such a trivial thing
@@ -21,7 +21,7 @@ mod math {
 mod map {
 	// rust-disappointment: leading :: necessary in this case?
 	pub type TileVec= ::math::Vec2<i32>;
-	// rust-disappointment: how much value does `::std::vec::` add instead of `std::` ?
+	// rust-disappointment: how much value does `::std::vec::` add in respect to `std::` ?
 	type Tiles= ::std::vec::Vec<Tile>;
 	
 	enum TileType {
