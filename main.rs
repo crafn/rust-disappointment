@@ -62,8 +62,7 @@ mod map {
         // rust-disappointment: this is really bad: mutability can't be
         // parameterized so code has to be duplicated. This is even worse than
         // in C++ because functions can't be overloaded, but has to be named
-        // differently, which makes adding parameterized mutability afterwards
-        // painful.
+        // differently, which makes adding parameterized mutability afterwards painful.
         pub fn get_mut_tile<'l>(&'l mut self, p: TileVec) -> &'l mut Tile {
             let i= self.get_tile_index(p);
             // rust-disappointment: having language constructs embedded in
@@ -127,8 +126,7 @@ mod map {
         //   let mut size= TileVec{x: 0, y: 0};
         //   size.x= 5u;
         //   let map= Map::new(size);
-        // -> error: mismatched types: expected `Vec2<i32>` but found
-        // `Vec2<uint>`
+        // -> error: mismatched types: expected `Vec2<i32>` but found `Vec2<uint>`
         
         let mut size: TileVec = TileVec{x: 0, y: 0};
         let mut lines= vec![];
